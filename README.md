@@ -1,4 +1,4 @@
-# Mirza Sutrisno — Portfolio
+# Mirza — Portfolio
 
 Static multilingual portfolio based on the RyanCV resume template in the parent folder, customized for Mirza Sutrisno. English is the default language; Indonesian and Arabic are available from the language selector. Arabic enables RTL layout.
 
