@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111318">
+  <meta name="description" content="Academic supervision and research milestones of undergraduate students guided by Mirza Sutrisno.">
+  <title>Supervision — Mirza Sutrisno</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=105f255">
+  <script defer src="assets/js/site.js"></script>
+  <style>
+    :root{--amber:#f5a623}
+    .supervision-page{max-width:1280px;margin:0 auto;padding:0 5vw}
+    .supervision-hero{padding:clamp(2rem,4vw,3.5rem) 0 2rem}
+    .supervision-hero h1{display:inline-block;position:relative;margin:1.25rem 0 1rem;font:800 clamp(2.8rem,7vw,5.5rem)/1 var(--display);letter-spacing:-.065em}
+    .supervision-hero h1::after{content:"";position:absolute;left:0;bottom:-.18em;width:56%;height:.09em;border-radius:99px;background:var(--amber)}
+    .supervision-intro{max-width:760px;margin:1.4rem 0 0;color:var(--muted);font-size:1.05rem;line-height:1.8}
+    .filter-panel{display:grid;grid-template-columns:minmax(240px,1.5fr) repeat(2,minmax(180px,1fr));gap:1rem;align-items:end;margin:1.5rem 0;padding:1.2rem;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+    .filter-field{display:grid;gap:.45rem}
+    .filter-field label{color:var(--muted);font:600 .75rem var(--mono);letter-spacing:.07em;text-transform:uppercase}
+    .filter-control{width:100%;min-height:44px;padding:.7rem .85rem;border:1px solid var(--line);border-radius:8px;background:#111318;color:var(--text);font:500 .9rem var(--mono)}
+    .filter-control:focus{outline:2px solid var(--amber);outline-offset:2px}
+    .table-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1rem 0;color:var(--muted);font-size:.88rem}
+    .table-wrap{overflow:auto;margin-bottom:5rem;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+    .supervision-table{width:100%;min-width:1080px;border-collapse:collapse;text-align:left}
+    .supervision-table th{padding:.95rem .85rem;background:#20222a;color:var(--muted);font:700 .72rem var(--mono);letter-spacing:.07em;text-transform:uppercase;white-space:nowrap}
+    .supervision-table td{padding:1rem .85rem;border-top:1px solid var(--line);vertical-align:top;color:var(--text);font-size:.88rem;line-height:1.55}
+    .supervision-table tbody tr:hover{background:#ffffff06}
+    .supervision-table .number,.supervision-table .student-id{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+    .student-name{min-width:150px;font-weight:700}
+    .degree-badge{display:inline-block;padding:.35rem .6rem;border:1px solid #f5a62366;border-radius:999px;background:#f5a62312;color:#ffc15c;font-size:.75rem;font-weight:700;white-space:nowrap}
+    .academic-year{white-space:nowrap}
+    .research-title{min-width:310px;max-width:480px}
+    .research-title strong{display:block;color:var(--text);font-weight:700}
+    .research-title em{display:block;margin-top:.35rem;color:var(--muted);font-size:.82rem}
+    .status-badge{display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .65rem;border-radius:999px;font-size:.75rem;font-weight:700;white-space:nowrap}
+    .status-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+    .status-completed{background:#c7f36a18;color:#c7f36a}
+    .status-progress{background:#f5a62318;color:#ffc15c}
+    .empty-state{padding:2rem;color:var(--muted);text-align:center}
+    .supervision-footer{padding:2rem 5vw;border-top:1px solid var(--line)}
+    .supervision-footer-inner{max-width:1280px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+    @media(max-width:760px){.filter-panel{grid-template-columns:1fr}.supervision-page{padding:0 6vw}.table-meta{align-items:flex-start;flex-direction:column}.supervision-footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="index.html#home"><span class="brand-mark">Mz</span><span>Mirza Sutrisno<span class="brand-sub">INFORMATICS · RESEARCH · LEADERSHIP</span></span></a>
+    <nav aria-label="Main navigation">
+      <details class="nav-dropdown"><summary>About</summary><div class="nav-dropdown-menu"><a href="index.html#about">About</a><a href="teaching.html">Teaching</a><a href="supervision.html" aria-current="page">Supervision</a></div></details>
+      <a href="index.html#work">Research</a><a href="index.html#experience">Experience</a><a href="index.html#publications">Publications</a>
+    </nav>
+    <div class="tools"><select id="language" aria-label="Choose language"><option value="en">EN</option><option value="id">ID</option><option value="ar">العربية</option></select><a class="contact-btn" href="mailto:mirza.sutrisno@umj.ac.id">Get in touch ↗</a><button class="menu" aria-label="Open menu">☰</button></div>
+  </header>
+  <main class="supervision-page">
+    <section class="supervision-hero" aria-labelledby="page-title">
+      <div class="eyebrow"><span class="dot"></span><span>ACADEMIC MENTORSHIP · STUDENT RESEARCH</span></div>
+      <h1 id="page-title">Supervision</h1>
+      <p class="supervision-intro">Mentoring the next generation of scholars and innovators. This page chronicles the academic journey and research milestones of students under my guidance.</p>
+    </section>
+    <section class="filter-panel" aria-label="Filter student supervision records">
+      <div class="filter-field"><label for="student-search">Search students or research titles</label><input class="filter-control" id="student-search" type="search" placeholder="Search by student name or research title…" autocomplete="off"></div>
+      <div class="filter-field"><label for="academic-year-filter">Academic year</label><select class="filter-control" id="academic-year-filter"><option value="all">All Academic Years</option><option value="2023/2024">2023/2024</option><option value="2024/2025">2024/2025</option><option value="2025/2026">2025/2026</option></select></div>
+      <div class="filter-field"><label for="status-filter">Status</label><select class="filter-control" id="status-filter"><option value="all">All Statuses</option><option value="Completed">Completed</option><option value="On Progress">On Progress</option></select></div>
+    </section>
+    <div class="table-meta"><span id="result-count" aria-live="polite">Showing 14 students</span><span>Undergraduate supervision · Faculty of Engineering</span></div>
+    <div class="table-wrap">
+      <table class="supervision-table">
+        <thead><tr><th scope="col">No</th><th scope="col">ID Number</th><th scope="col">Student Name</th><th scope="col">Degree</th><th scope="col">Academic Year</th><th scope="col">Research Title</th><th scope="col">Status</th></tr></thead>
+        <tbody id="student-rows">
+          <tr data-year="2023/2024" data-status="Completed"><td class="number">1</td><td class="student-id">2019470015</td><td class="student-name">Aziz Zul Hakim</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2023/2024</td><td class="research-title"><strong>Sistem Informasi Surat Permohonan Pegawai Berbasis Web (Studi Kasus: Mahkamah Agung Ditjen Badilmiltun)</strong><em>Web-Based Employee Request Letter Information System (Case Study: Supreme Court, Directorate General of Badilmiltun)</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2023/2024" data-status="Completed"><td class="number">2</td><td class="student-id">2018470017</td><td class="student-name">Dhava Firmanda Putra</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2023/2024</td><td class="research-title"><strong>Aplikasi Jual Beli Online Toko Kosmetik Berbasis Android (Studi Kasus: Toko Kosmetik dan SKINCARE Sekar)</strong><em>Android-Based Online Shopping Application for a Cosmetics Store (Case Study: Sekar Cosmetics and Skincare Store)</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2023/2024" data-status="Completed"><td class="number">3</td><td class="student-id">20200410700005</td><td class="student-name">Sofia Wulandari</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2023/2024</td><td class="research-title"><strong>Aplikasi E-payroll Karyawan Pada Koperasi Simpan Pinjam Sejahtera Abadi Berbasis Web</strong><em>Web-Based Employee E-Payroll Application for the Sejahtera Abadi Savings and Loans Cooperative</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2023/2024" data-status="Completed"><td class="number">4</td><td class="student-id">20200410700007</td><td class="student-name">Deden Guritno</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2023/2024</td><td class="research-title"><strong>Sistem Informasi Manajemen Strategi Pemasaran Digital Media Sosial</strong><em>Social Media Digital Marketing Strategy Management Information System</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2024/2025" data-status="Completed"><td class="number">5</td><td class="student-id">20200410700011</td><td class="student-name">Ferdyan Ihza Afriezal</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2024/2025</td><td class="research-title"><strong>Implementasi DHCP Security Dan Alokasi Bandwidth Menggunakan Network Automation Pada Mikrotik (Studi Kasus: PT. Four Pillar Network)</strong><em>Implementation of DHCP Security and Bandwidth Allocation Using Network Automation on MikroTik (Case Study: PT Four Pillar Network)</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2024/2025" data-status="Completed"><td class="number">6</td><td class="student-id">22040760001</td><td class="student-name">Muchammad Abiyrheza</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2024/2025</td><td class="research-title"><strong>Sistem Jaringan Dan Manajemen Bandwidth Menggunakan Mikrotik Dengan Pendekatan Python Dan Otomatisasi (Studi Kasus: PT. Almazs Putra Sukses Mandiri)</strong><em>Network System and Bandwidth Management Using MikroTik with a Python and Automation Approach (Case Study: PT Almazs Putra Sukses Mandiri)</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2024/2025" data-status="Completed"><td class="number">7</td><td class="student-id">2018470099</td><td class="student-name">Syarifuddin</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2024/2025</td><td class="research-title"><strong>Aplikasi Pengelolaan Surat-Menyurat Di Kelurahan Pegangsaan Dua</strong><em>Correspondence Management Application for Pegangsaan Dua Urban Village</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2025/2026" data-status="Completed"><td class="number">8</td><td class="student-id">20210410700002</td><td class="student-name">Hari Mukti</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Sistem Pencegahan Kebakaran Otomatis Berbasis IoT Dengan Failover Dan Pemulihan Sistem (Studi Kasus: Gedung Sasana Krida, Warakas)</strong><em>IoT-Based Automatic Fire Prevention System with Failover and System Recovery (Case Study: Sasana Krida Building, Warakas)</em></td><td><span class="status-badge status-completed">Completed</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">9</td><td class="student-id">22040700013</td><td class="student-name">Muhamad Lutfi Yatna</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Sistem Kontrol Akses Gedung Berbasis IoT dengan Deteksi Kedekatan Menggunakan Bluetooth Low Energy</strong><em>IoT-Based Building Access Control System with Proximity Detection Using Bluetooth Low Energy</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">10</td><td class="student-id">22040700091</td><td class="student-name">Mohamad Fajar Mutaqin</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Smart Chatbot AI Untuk Rekomendasi Produk Deodoran Dengan Mengunakan Algoritma Content-Based Filtering</strong><em>AI Smart Chatbot for Deodorant Product Recommendations Using a Content-Based Filtering Algorithm</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">11</td><td class="student-id">20210410700053</td><td class="student-name">Ananda Radhiyya Annafi</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Pengembangan Aplikasi HealthyPosyandu Berbasis Website dengan Metode Waterfall untuk Rekomendasi Gizi Ibu dan Anak (Studi Kasus: Posyandu Kel. Pejuang)</strong><em>Development of a Website-Based HealthyPosyandu Application Using the Waterfall Method for Maternal and Child Nutrition Recommendations (Case Study: Pejuang Urban Village Posyandu)</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">12</td><td class="student-id">23040700092</td><td class="student-name">Muhammad Arifin Ilham</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Prototipe Smart Door Lock Menggunakan Teknologi Palm Vein Recognition untuk Peningkatan Keamanan Akses Ruangan</strong><em>Smart Door Lock Prototype Using Palm Vein Recognition Technology to Improve Room Access Security</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">13</td><td class="student-id">23040700108</td><td class="student-name">SAIF ALI MOHSEN DAHSHAL</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Rancang Bangun Hybrid IDS Menggunakan Snort dan Machine Learning untuk Mendeteksi Serangan Port Scanning</strong><em>Design and Development of a Hybrid IDS Using Snort and Machine Learning to Detect Port Scanning Attacks</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+          <tr data-year="2025/2026" data-status="On Progress"><td class="number">14</td><td class="student-id">23040700066</td><td class="student-name">ZAKY YUSUF AJINDRA</td><td><span class="degree-badge">Undergraduate (S1)</span></td><td class="academic-year">2025/2026</td><td class="research-title"><strong>Sistem Deteksi Dini Posisi Tidur Bayi Menggunakan YOLO26 dan Kamera Inframerah untuk Pencegahan SIDS Berbasis IoT</strong><em>IoT-Based Early Detection of Infant Sleeping Position Using YOLO26 and an Infrared Camera for SIDS Prevention</em></td><td><span class="status-badge status-progress">On Progress</span></td></tr>
+        </tbody>
+      </table>
+      <p class="empty-state" id="empty-state" hidden>No student records match your filters. Try changing your search or selections.</p>
+    </div>
+  </main>
+  <footer class="supervision-footer"><div class="supervision-footer-inner"><a class="brand" href="index.html#home"><span class="brand-mark">Mz</span><span>Mirza Sutrisno<span class="brand-sub">INFORMATICS · RESEARCH · LEADERSHIP</span></span></a><span>© <span id="year"></span> Mirza Sutrisno · Jakarta, Indonesia</span><a href="index.html#home">Back to home ↗</a></div></footer>
+  <script>
+    const rows=[...document.querySelectorAll('#student-rows tr')];
+    const searchInput=document.getElementById('student-search');
+    const yearFilter=document.getElementById('academic-year-filter');
+    const statusFilter=document.getElementById('status-filter');
+    function filterStudents(){
+      const query=searchInput.value.trim().toLowerCase();
+      const year=yearFilter.value;
+      const status=statusFilter.value;
+      let visible=0;
+      rows.forEach(row=>{
+        const searchable=`${row.querySelector('.student-name').textContent} ${row.querySelector('.research-title').textContent}`.toLowerCase();
+        const matches=searchable.includes(query)&&(year==='all'||row.dataset.year===year)&&(status==='all'||row.dataset.status===status);
+        row.hidden=!matches;
+        if(matches)visible++;
+      });
+      document.getElementById('result-count').textContent=`Showing ${visible} of ${rows.length} students`;
+      document.getElementById('empty-state').hidden=visible!==0;
+    }
+    searchInput.addEventListener('input',filterStudents);
+    yearFilter.addEventListener('change',filterStudents);
+    statusFilter.addEventListener('change',filterStudents);
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
