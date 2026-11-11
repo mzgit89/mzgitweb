@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="assets/css/site.css?v=105f255">
   <script defer src="assets/js/site.js"></script>
   <style>
+    .nav-dropdown{position:relative;display:inline-block}
+    .nav-dropdown>summary{list-style:none;cursor:pointer}
+    .nav-dropdown>summary::-webkit-details-marker{display:none}
+    .nav-dropdown>summary::after{content:'⌄';margin-left:.35em;font-size:.8em}
+    .nav-dropdown-menu{position:absolute;z-index:20;top:100%;left:0;min-width:9rem;padding:.45rem;background:var(--panel,#181a21);border:1px solid var(--line,#30323a);border-radius:.5rem;box-shadow:0 12px 30px #0006;display:flex;flex-direction:column;align-items:stretch}
+    .nav-dropdown-menu a{display:block;width:100%;padding:.6rem .75rem;white-space:nowrap}
+    .nav-dropdown-menu a:hover,.nav-dropdown-menu a:focus-visible{background:var(--line,#30323a);border-radius:.3rem}
     .teaching-page{max-width:1180px;margin:0 auto;padding:0 5vw}
     .teaching-hero{padding:clamp(2rem,4vw,3.5rem) 0 2.5rem}
     .teaching-hero h1{max-width:900px;margin:1.5rem 0;font:800 clamp(3rem,8vw,6.6rem)/.98 var(--display);letter-spacing:-.07em}
@@ -51,7 +58,7 @@
   <header class="top">
     <a class="brand" href="index.html#home"><span class="brand-mark">Mz</span><span>Mirza Sutrisno<span class="brand-sub">INFORMATICS · RESEARCH · LEADERSHIP</span></span></a>
     <nav aria-label="Main navigation">
-      <details class="nav-dropdown"><summary>About</summary><div class="nav-dropdown-menu"><a href="index.html#about">About</a><a href="teaching.html" aria-current="page">Teaching</a></div></details>
+      <details class="nav-dropdown"><summary>About</summary><div class="nav-dropdown-menu"><a href="index.html#about">About</a><a href="teaching.html" aria-current="page">Teaching</a><a href="supervision.html">Supervision</a></div></details>
       <a href="index.html#work">Research</a><a href="index.html#experience">Experience</a><a href="index.html#publications">Publications</a>
     </nav>
     <div class="tools"><select id="language" aria-label="Choose language"><option value="en">EN</option><option value="id">ID</option><option value="ar">العربية</option></select><a class="contact-btn" href="mailto:mirza.sutrisno@umj.ac.id">Get in touch ↗</a><button class="menu" aria-label="Open menu">☰</button></div>
@@ -61,12 +68,7 @@
       <div class="eyebrow"><span class="dot"></span><span>TEACHING · COMPUTER SCIENCE · PRACTICE</span></div>
       <h1>Learning to build<br><em>what matters.</em></h1>
       <p class="teaching-intro">Explore the courses I teach across core areas of computing and information technology. Each course connects foundational concepts with practical skills, thoughtful design, and real-world problem solving.</p>
-      <div class="course-tools">
-        <span class="course-count" id="course-count" aria-live="polite">9 courses</span>
-        <label class="visually-hidden" for="course-search">Search courses</label>
-        <input class="course-search" id="course-search" type="search" placeholder="Search courses…" autocomplete="off">
-        <div class="course-actions"><button type="button" id="expand-all">Expand all</button><button type="button" id="collapse-all">Collapse all</button></div>
-      </div>
+      <div class="course-tools"><span class="course-count" id="course-count" aria-live="polite">9 courses</span><label class="visually-hidden" for="course-search">Search courses</label><input class="course-search" id="course-search" type="search" placeholder="Search courses…" autocomplete="off"><div class="course-actions"><button type="button" id="expand-all">Expand all</button><button type="button" id="collapse-all">Collapse all</button></div></div>
     </section>
     <section class="course-list" aria-label="Courses">
       <article class="course-card" data-course="blockchain"><button class="course-toggle" aria-expanded="false" aria-controls="detail-blockchain"><span class="course-number">01</span><span><span class="course-title">Blockchain</span><span class="course-category">Distributed systems · Cryptography</span></span><span class="course-chevron" aria-hidden="true">＋</span></button><div class="course-detail" id="detail-blockchain" hidden><p>Explore decentralized networks and tamper-evident digital records, including how cryptographic hashes, consensus, distributed ledgers, and smart contracts work together.</p><h3>Key topics</h3><ul><li>Distributed ledgers, blocks, and transaction lifecycle</li><li>Cryptographic foundations and consensus protocols</li><li>Smart contracts, common risks, and practical use cases</li></ul></div></article>
