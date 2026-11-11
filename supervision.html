@@ -13,6 +13,13 @@
   <link rel="stylesheet" href="assets/css/site.css?v=105f255">
   <script defer src="assets/js/site.js"></script>
   <style>
+    .nav-dropdown{position:relative;display:inline-block}
+    .nav-dropdown>summary{list-style:none;cursor:pointer}
+    .nav-dropdown>summary::-webkit-details-marker{display:none}
+    .nav-dropdown>summary::after{content:'⌄';margin-left:.35em;font-size:.8em}
+    .nav-dropdown-menu{position:absolute;z-index:20;top:100%;left:0;min-width:9rem;padding:.45rem;background:var(--panel,#181a21);border:1px solid var(--line,#30323a);border-radius:.5rem;box-shadow:0 12px 30px #0006;display:flex;flex-direction:column;align-items:stretch}
+    .nav-dropdown-menu a{display:block;width:100%;padding:.6rem .75rem;white-space:nowrap}
+    .nav-dropdown-menu a:hover,.nav-dropdown-menu a:focus-visible{background:var(--line,#30323a);border-radius:.3rem}
     .supervision-page{max-width:1280px;margin:0 auto;padding:0 5vw}
     .supervision-hero{padding:clamp(2rem,4vw,3.5rem) 0 2rem}
     .supervision-hero h1{display:inline-block;position:relative;margin:1.25rem 0 1rem;font:800 clamp(2.8rem,7vw,5.5rem)/1 var(--display);letter-spacing:-.065em}
